@@ -1,0 +1,11 @@
+.jumbotron {
+	background-color: black; 
+	font-color: white;
+	background-size: cover;
+}
+
+
+#first_image {
+	height: 200px;
+    width: 50%;
+}
