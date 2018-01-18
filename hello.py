@@ -1,13 +1,13 @@
-from flask import Flask
+from flask import Flask, render_template 
 app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-	return '<h1> <i> I live in Palestine </i> </h1>'
+	return render_template('about.html') 
 
-@app.route('/quotes')
+@app.route('/post')
 def my_favorite_quote():
-	return 'You left my mind pregnant with babies called memories'
+	return render_template("post.html")
 
 @app.route('/books')
 def my_favourite_book():
@@ -33,3 +33,4 @@ def show_result(num1, num2, operator):
 		result = num1 * num2 
 
 	return str(result)
+app.run()
