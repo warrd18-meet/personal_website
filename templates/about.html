@@ -2,27 +2,84 @@
 <html>
 <head>
 	<title>Limitless Souls - About</title>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		
  	<!-- Latest compiled and minified CSS -->
- 	<link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
  
  	<!-- jQuery library -->
- 	<scriptsrc="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
  
  	<!-- Latest compiled JavaScript -->
- 	<scriptsrc="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  
  	<meta name="viewport" content="width=device-width, initial-scale=1">
 
- <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-<h1> Welcome To My Thoughts </h1>
+ 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 
-<!-- 
+ <style>
+.jumbotron {
+	background-color: #7e7e7e; 
+	font-color: white;
+	background-size: cover;
+}
+body { 
+	background-image: url("https://pbs.twimg.com/profile_images/640072036551790592/ZvuDVCiP.jpg")
+ }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+</style>
+
+ </head>
+<body>
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="/about" class="w3-bar-item w3-button">Thoughts</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="/aboutsection" class="w3-bar-item w3-button">About</a>
+      <a href="/profile" class="w3-bar-item w3-button">My Profile</a>
+      
+    </div>
+  </div>
+</div>
+<!--
+<ul>
+  <li><a href="#thoughts">Thoughts</a></li>
+  <li><a href="#profile">My Profile</a></li>
+  <li><a href='aboutsection.html'>About</a></li>
+</ul>
+
 <p> This is my personal blog </p> 
 <p> This website is a <abbr title="Middle East Entepenures of Tomorrow">MEET</abbr> project. </p> 
 -->
+<br> 
+<br>
+<br>
+<br>
+
 <div class="container">
 
 <div class="jumbotron"> 
@@ -31,11 +88,19 @@
 </div>
 </div>
 <div id="first_image">
-<img src="https://pbs.twimg.com/profile_images/640072036551790592/ZvuDVCiP.jpg">
+
 </div>
 
-<button type="button"> <a href="/post">Post Thoughts</a> </button>
-
+<button type="button" class="btn btn-secondary btn-lg"> <a href="/post">Post Thoughts</a> </button>
+ 
 	
 </body>
 </html>
+
+
+
+
+
+
+
+
