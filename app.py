@@ -1,8 +1,10 @@
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine
-from flask import Flask, render_template, request 
+from flask import Flask, render_template, request
+from flask_heroku import Heroku
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///./test.db'
+heroku = Heroku(app)
 db = SQLAlchemy(app)
 
 class Soul(db.Model):
@@ -86,4 +88,3 @@ def show_result(num1, num2, operator):
 
 db.create_all()
 print('hi')
-app.run()
