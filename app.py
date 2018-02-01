@@ -88,3 +88,4 @@ def show_result(num1, num2, operator):
 
 db.create_all()
 print('hi')
+# app.run()
