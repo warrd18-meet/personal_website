@@ -8,14 +8,14 @@ heroku = Heroku(app)
 db = SQLAlchemy(app)
 
 class Soul(db.Model):
-    __tablename__ = "posts"
-    id = db.Column('id', db.Integer, primary_key=True)
-    user_name = db.Column('user_name', db.Unicode)
-    thoughts = db.Column('thoughts', db.Integer)
+	__tablename__ = "posts"
+	id = db.Column('id', db.Integer, primary_key=True)
+	user_name = db.Column('user_name', db.Unicode)
+	thoughts = db.Column('thoughts', db.Integer)
 
-    def __init__(self, user_name, thoughts):
-        self.user_name = user_name
-    	self.thoughts = thoughts
+	def __init__(self, user_name, thoughts):
+		self.user_name = user_name
+		self.thoughts = thoughts
 
 @app.route('/')
 def hello_world():
@@ -87,5 +87,5 @@ def show_result(num1, num2, operator):
 	return str(result)
 
 db.create_all()
-print('hi')
+# print('hi')
 # app.run()
