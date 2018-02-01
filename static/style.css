@@ -1,6 +1,4 @@
 
-
-
 #first_image {
 	height: 200px;
     width: 50%;
@@ -12,3 +10,14 @@ h1 {
 body {
     background-color: 
 }
+
+
+.post {
+	text-align: center;
+	background-color: red;
+}
+
+.w3-card w3-margin w3-margin-top {
+	text-align: right;
+}
+

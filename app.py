@@ -33,7 +33,17 @@ def another_post():
 	reg = Soul(user_name, thoughts)
 	db.session.add(reg)
 	db.session.commit()
-	return render_template('working.html')
+	posts = Soul.query.all()
+	return render_template('profile.html', posts= posts)
+
+@app.route('/submit_form', methods=['POST'])
+def submit_form():
+	user_name = request.form['user_name']
+	thoughts = request.form['thoughts']
+
+	# gives you all the users in your table
+	
+
 
 @app.route('/about')
 def my_thoughts():
